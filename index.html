@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,46 +8,56 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <title>Rock, paper, scissors</title>
-    
+
 </head>
+
 <body>
     <div id="game" class="container">
-   <h1>Make a choise and win the game!</h1>
+        <h1>Make a choice and win the game!</h1>
+        <div class="round">
+            <div id="player">
+                <h3>Player:</h3>
+                <div id="opbox">
 
-    <div id="opbox">
+                    <img class="option" src="./assets/rock.png" alt="rock">
+                    <img class="option" src="./assets/paper.png" alt="paper">
+                    <img class="option" src="./assets/scissors.png" alt="scissors">
 
-        <img class="option" src="./assets/rock.png" alt="rock">
-        <img class="option" src="./assets/paper.png" alt="paper">
-        <img class="option" src="./assets/scissors.png" alt="scissors">
+                </div>
+            </div>
 
+
+            <div id="computer">
+                <h3>Computer:</h3>
+                <div class="alterImg"> </div>
+                
+            </div>
+        </div>
+        <div id="score">
+            <div id="playerScore">
+                <p></p>
+            </div>
+            <div id="computerScore">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div id="end">
+        <h2></h2>
+        <button type="reset" id="replay">Play again</button>
     </div>
 
-    <div id="computer">
-        <h3>Computer:</h3>
-        <p id="computerChoice"></p>
-    </div>
+    <!-- choose smth -, gamble gif of commputer choice after 2 seconds -->
+    <!-- Show result and update score -->
+    <!-- After game display congrads or too bad to the user and an arrow to play again -->
 
-    <div id="score">
-        <div id="playerScore"><p></p> </div>
-        <div id="computerScore"> <p></p></div>
-    </div>
-</div>
-<div id="end">
-    <h2></h2>
-    <button type="reset" id="replay"> Play again</button>
-</div>
-
-        <!-- choose smth -, gamble gif of commputer choice after 2 seconds -->
-        <!-- Show result and update score -->
-        <!-- After game display congrads or too bad to the user and an arrow to play again -->
-
-        <!-- ui clean look white, gray and orange-->
+    <!-- ui clean look white, gray and orange-->
 
 
 
 
 
-        <!-- MERGe FROM BRANCH
+    <!-- MERGe FROM BRANCH
         
     Checkout the branch we want to merge INTO i.e. main with the command git checkout main.
 
@@ -57,7 +68,8 @@
     Let’s push our main branch into our remote repo by running git push origin main . Go to your GitHub repo and you’ll see that our main branch will have all the changes and commits you made to the rps-ui branch. Congratulations! You’ve successfully pushed your first feature into your production branch!
 
     Now that we have all our code in the main branch, we don’t really need our rps-ui branch anymore. Let’s do some cleanup, both locally and in the remote repo. Delete the branch from our local repo with git branch -d rps-ui and also delete it from the remote repo on GitHub with git push --delete origin rps-ui. Congra -->
-    
+
 
 </body>
+
 </html>

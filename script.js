@@ -23,9 +23,15 @@ let choice= Array.from(document.getElementsByClassName("option"));
 // ******Computer choice**** */
 function getComputerChoice() {
   let randomChoice = Math.floor(Math.random() * options.length);
-  let para = document.getElementById("computerChoice")
-  para.textContent= options[randomChoice];
-  
+  let img= document.getElementsByClassName('alterImg')[0];
+  //img.style.animationPlayState='paused';
+  // let url = ;
+  // console.log(url)
+  img.style.animation='none';
+  img.style.backgroundImage=`url(./assets/${options[randomChoice]}.png)`;
+  window.setTimeout(function(){
+    img.style.animation='swapimg 0.5s infinite forwards'
+},1500); 
   return options[randomChoice];
 }
 
@@ -56,6 +62,9 @@ function game() {
       }
 
     document.getElementById('end').children[0].textContent=winner+" won! You can play again if you want :)"
+
+    
+   
 }
 function playRound(playerSelection, computerSelection) {
   switch (true) {

@@ -6,34 +6,79 @@ body{
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
     background-color: white;
     margin:40px auto;
     padding: 20px;
-    width: 80vw;
+    width: 90vw;
     height: 80vh;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #44424170;
 }
-
-#opbox{
-    display: flex;
+.round{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     flex:auto;
-    flex-shrink: 100px;
-    justify-content: space-around;
+}
+#player{
+    align-items: center;
+}
+#opbox{
+    
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 .option{
+    margin:0 10px;
+    width: 100px;
+    height: 100px;
     padding: 10px;
-    border: 3px solid #ff6600;
+    border: 3px solid #c75205;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #58535070;
 }
 #computer{
+    border-radius: 5px;
+    height: fit-content;
+    background-color: #f8d9b0;
     width: 50vw;
+    align-items: center;
     display: flex;
-    flex: auto;
+    flex-direction: column;
+    flex: 0.5;
 }
+.alterImg {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #58535070;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    animation: swapimg 0.5s infinite forwards;
+
+  }
+  
+  @keyframes swapimg {
+    30% {
+        background-image: url('./assets/rock.png')
+    }
+    65% {
+        background-image: url('./assets/paper.png')
+    }
+    100% {
+        background-image: url('./assets/scissors.png')
+      
+    }
+   
+  }
 #score{
-    width: 25vw ;
+    width: 50vw ;
     margin: auto;
     padding: 5px;
     display: flex;
@@ -42,17 +87,21 @@ body{
     
 }
 #score > div{
-    font-size: larger;
+    display: flex;
+    font-size: 24px;
     font-weight: bold;
     width: 50px;
     height: 50px;
-    
+    align-items: center;
+    justify-content: space-evenly;
     border-radius: 10px;
     border: 2px solid rgb(61, 61, 61);
 
 }
-div > p{
-    margin: auto;
+#score >div >p{
+    margin:0px;
+    width: fit-content;
+    align-self: center;
 }
 #end{
     display: none;
