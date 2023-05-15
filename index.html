@@ -16,7 +16,7 @@
         <h1>Make a choice and win the game!</h1>
         <div class="round">
             <div id="player">
-                <h3>Player:</h3>
+
                 <div id="opbox">
 
                     <img class="option" src="./assets/rock.png" alt="rock">
@@ -30,21 +30,28 @@
             <div id="computer">
                 <h3>Computer:</h3>
                 <div class="alterImg"> </div>
-                
+
             </div>
         </div>
         <div id="score">
-            <div id="playerScore">
-                <p></p>
+            <div class="player">
+                <div id="playerScore">
+                    <p></p>
+                </div>
+                <p class="tag">Player</p>
             </div>
-            <div id="computerScore">
-                <p></p>
+            <div class="computer">
+                <div id="computerScore">
+                    <p></p>
+                </div>
+                <p class="tag">Computer</p>
             </div>
         </div>
     </div>
     <div id="end">
-        <h2></h2>
-        <button type="reset" id="replay">Play again</button>
+        <h3></h3>
+        <button id="replay"><img src="./assets/rotate.png" alt="Play again"></button>
+        <p class="tag">Replay</p>
     </div>
 
     <!-- choose smth -, gamble gif of commputer choice after 2 seconds -->

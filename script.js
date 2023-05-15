@@ -15,7 +15,12 @@ let choice= Array.from(document.getElementsByClassName("option"));
     option.addEventListener('click', e =>{
       let playerOption=e.target.getAttribute("alt")
       console.log(playerOption);
-     
+      
+     e.target.style.backgroundColor="#f8d9b0";
+      window.setTimeout(function(){
+        e.target.style.backgroundColor="#fff";
+    },1500); 
+
      game(playRound(playerOption,getComputerChoice()));
     });
   });
@@ -57,7 +62,7 @@ function game() {
     if(score[0] ===5 || score[1] ===5)
       {
         document.getElementById('game').style.display='none'
-        document.getElementById('end').style.display='block'
+        document.getElementById('end').style.display='flex'
         document.getElementById('end').classList.add("container")
       }
 

@@ -16,21 +16,28 @@ body{
     border-radius: 10px;
     box-shadow: 2px 2px 5px #44424170;
 }
+h1{
+    align-self: center;
+}
 .round{
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex:auto;
+    align-items: flex-start;
+    flex:1;
 }
-#player{
-    align-items: center;
+div#player{
+    
+    display: flex;
+
 }
 #opbox{
-    
+    height: 170px;
     display: flex;
     flex:1;
     flex-direction: row;
-    justify-content: space-evenly;
+   align-items: flex-end;
+
 }
 .option{
     margin:0 10px;
@@ -41,19 +48,21 @@ body{
     border-radius: 10px;
     box-shadow: 10px 10px 5px #58535070;
 }
-#computer{
+.round >#computer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border-radius: 5px;
     height: fit-content;
     background-color: #f8d9b0;
-    width: 50vw;
+    width: fit-content;
+    padding: 10px;
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex: 0.5;
+    
 }
 .alterImg {
     width: 100px;
-    height: 100px;
+    height:100px;
     border: 3px solid #000000;
     border-radius: 10px;
     box-shadow: 10px 10px 5px #58535070;
@@ -86,23 +95,72 @@ body{
     
     
 }
-#score > div{
+.player, .computer{
     display: flex;
+    flex-direction: column;
     font-size: 24px;
     font-weight: bold;
-    width: 50px;
-    height: 50px;
+    
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 10px;
-    border: 2px solid rgb(61, 61, 61);
+   
 
 }
-#score >div >p{
-    margin:0px;
-    width: fit-content;
-    align-self: center;
+p{
+    margin: 0px;
 }
+#playerScore, #computerScore{
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid rgb(61, 61, 61);
+    align-items: center;
+    
+}
+.tag{
+    font-size: 17px;
+    font-weight: normal;
+}
+
 #end{
-    display: none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight:100;
+}
+#replay{
+    border-radius: 10px;
+    border: 2px solid rgb(61, 61, 61);
+    background-color: #000000bf;
+}
+#replay > img{
+    width: 50px;
+    height: 50px;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .round{
+        padding-top: 0px;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .option{
+        width: 80px;
+    height: 80px;
+    }
+    #opbox{
+        height: fit-content;
+    }
+    #computer{
+        align-self: center;
+    }
+    .container{
+        width: 90vw;
+        height: 90vh;
+    }
 }
